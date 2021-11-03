@@ -68,19 +68,27 @@ parser.add_argument(
 args = parser.parse_args()
 print(args)
 
+if args.event_names[0] == "null":
+    print("Event_names set to null, will not filter by event_names.")
+else:
+    print("False")
+
+
 # --------------------------------------------------
 subjects = pd.read_csv(args.subjectkeys)
 subjects = list(subjects.iloc[:,0])
 
 for i in range(len(args.files)):
     file_name = args.files[i]
-    abcd = pd.read_csv(args.path + '/' + file_name, 
-                     sep = '\t', low_memory = False)
+    abcd = pd.read_csv(args.path + '/' + file_name, sep = '\t', low_memory = False)
     sub_index = abcd.subjectkey.isin(subjects)
     sub_index[0] = True
     filtered_subjects = abcd[sub_index]
-    event_index = filtered_subjects.eventname.isin(args.event_names)
-    event_index[0] = True
-    filtered_subjects = filtered_subjects[event_index]
+
+    if args.event_names[0] != "null": 
+        event_index = filtered_subjects.eventname.isin(args.event_names)
+        event_index[0] = True
+        filtered_subjects = filtered_subjects[event_index]
+
     out_path = args.outpath + '/filtered_' + file_name[0:-3] + 'csv'
     filtered_subjects.to_csv(out_path, index = False)
