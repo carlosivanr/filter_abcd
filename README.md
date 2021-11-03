@@ -15,6 +15,7 @@ This program filters the ABCD study .txt files by a pre-defined list of subjectk
 -o, --outpath Corresponds to the designated directory to write the output files. Files will be in .csv format and prefixed with "filtered."
 
 ##Usage
+
 python filter_abcd_py -p /path/to/.txt/files -f abcd_tlfb01.txt cct.txt -e baseline_year_1_arm_1 1_year_follow_up_y_arm_1 -s subjectkeys.csv
 
 Filters time line follow back and cash choice .txt files for baseline and year-1 follow up events for the subjects in subjectkeys.csv
