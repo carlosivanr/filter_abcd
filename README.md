@@ -8,7 +8,7 @@ This program filters the ABCD study .txt files by a pre-defined list of subjectk
 
 -f, --files Corresponds to the files to be filtered.
 
--e, --event_names Corresponds to the timepoints at which data were collected.
+-e, --event_names Corresponds to the timepoints at which data were collected. This argument can be set to null if the abcd*.txt file does not contain an eventname column.
 
 -s, --subjectkeys Corresponds to a .csv file consisting of one column of subjectkeys/GUIDs in the format of NDAR_INVxxxxxxxxx
 
