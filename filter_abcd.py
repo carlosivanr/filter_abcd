@@ -71,7 +71,7 @@ print(args)
 if args.event_names[0] == "null":
     print("Event_names set to null, will not filter by event_names.")
 else:
-    print("False")
+    print("Filtering " + args.event_names)
 
 
 # --------------------------------------------------
