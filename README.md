@@ -16,6 +16,6 @@ This program filters the ABCD study .txt files by a pre-defined list of subjectk
 
 ##Usage
 
-python filter_abcd_py -p /path/to/files/abcd_*.txt -f abcd_tlfb01.txt cct.txt -e baseline_year_1_arm_1 1_year_follow_up_y_arm_1 -s /path/to/subjectkeys.csv
+python filter_abcd.py -p /path/to/files/abcd_*.txt -f abcd_tlfb01.txt cct.txt -e baseline_year_1_arm_1 1_year_follow_up_y_arm_1 -s /path/to/subjectkeys.csv
 
 Filters time line follow back and cash choice .txt files for baseline and year-1 follow up events for the subjects in subjectkeys.csv
