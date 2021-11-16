@@ -86,9 +86,16 @@ for i in range(len(args.files)):
     filtered_subjects = abcd[sub_index]
 
     if args.event_names[0] != "null": 
-        event_index = filtered_subjects.eventname.isin(args.event_names)
-        event_index[0] = True
-        filtered_subjects = filtered_subjects[event_index]
+        if "eventname" in abcd.columns:
+            event_index = filtered_subjects.eventname.isin(args.event_names)
+            event_index[0] = True
+            filtered_subjects = filtered_subjects[event_index]
+        
+        
+        if "visit" in abcd.columns:
+            event_index = filtered_subjects.visit.isin(args.event_names)
+            event_index[0] = True
+            filtered_subjects = filtered_subjects[event_index]
 
     out_path = args.outpath + '/filtered_' + file_name[0:-3] + 'csv'
     filtered_subjects.to_csv(out_path, index = False)
