@@ -15,8 +15,7 @@ import os
 # --------------------------------------------------
 parser = argparse.ArgumentParser(
         description = "Filter ABCD study .txt files to match a pre-existing list of subjectkeys.",
-        formatter_class = argparse.ArgumentDefaultsHelpFormatter,
-    )
+        formatter_class = argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument(
     "-p",
@@ -24,8 +23,7 @@ parser.add_argument(
     metavar = "",
     help = "Filepath where abcd .txt files are located.",
     type = str,
-    required = True,
-)
+    required = True)
 
 parser.add_argument(
     "-f",
@@ -34,8 +32,7 @@ parser.add_argument(
     help = "Files to filter",
     type = str,
     nargs = "+",
-    required = True,
-)
+    required = True)
 
 parser.add_argument(
     "-e",
@@ -44,8 +41,7 @@ parser.add_argument(
     help = "Event names to filter, defaults to baseline_year_1_arm_1.",
     nargs = "+",
     type = str,
-    default = "baseline_year_1_arm_1",
-)
+    default = "baseline_year_1_arm_1")
 
 parser.add_argument(
     "-s",
@@ -53,8 +49,7 @@ parser.add_argument(
     help = "",
     metavar = "",
     type = str,
-    required = True,
-)
+    required = True)
 
 parser.add_argument(
     "-o",
@@ -62,8 +57,7 @@ parser.add_argument(
     metavar = "",
     help = "Filepath to output filtered files, defaults to the current working directory.",
     type = str,
-    default = os.getcwd(),
-)
+    default = os.getcwd())
 
 args = parser.parse_args()
 print(args)
