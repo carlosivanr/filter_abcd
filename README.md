@@ -1,3 +1,4 @@
+# Filter_abcd
 Filter_abcd is a Python script designed to work with the ABCD Study data. The ABCD Study is a prospective and longitidudinal study to track the brain, social, behavioral, and cognitive development of adolescents from 9-10 years of age for 10 years. Currently the study has enrolled close to 12,000 participants making it the largest longitudinal study of adolescent development in the United States and is supported by the National Institutes of Health.
 
 This program filters the ABCD study .txt files by a pre-defined list of subjectkeys in the format of NDAR_INVxxxxxxxxx and was designed for analysis of unpublished data (Rodriguez, C., Vakamudi, K., Claus, E., Squeglia, L., Houck, J.).
