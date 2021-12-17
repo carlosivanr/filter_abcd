@@ -2,7 +2,7 @@ Filter_abcd is a Python script designed to work with the ABCD Study data. The AB
 
 This program filters the ABCD study .txt files by a pre-defined list of subjectkeys in the format of NDAR_INVxxxxxxxxx and was designed for analysis of unpublished data (Rodriguez, C., Vakamudi, K., Claus, E., Squeglia, L., Houck, J.).
 
-##Arguments
+# Arguments
 
 -p, --path Corresponds to the directory where your *.txt files are located.
 
@@ -14,7 +14,7 @@ This program filters the ABCD study .txt files by a pre-defined list of subjectk
 
 -o, --outpath Corresponds to the designated directory to write the output files. Files will be in .csv format and prefixed with "filtered."
 
-##Usage
+# Usage
 
 python filter_abcd.py -p /path/to/files/abcd_*.txt -f abcd_tlfb01.txt cct.txt -e baseline_year_1_arm_1 1_year_follow_up_y_arm_1 -s /path/to/subjectkeys.csv
 
